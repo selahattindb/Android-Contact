@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/lyBaslik"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+            <SearchView
+                android:id="@+id/search"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/swipeToRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollViewHeader2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="40.0dip">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/my"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtAdi"
+                            android:layout_width="135.0dip"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="10.0dip"
+                            android:text="Adı"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtSoyadi"
+                            android:layout_width="110.0dip"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="10.0dip"
+                            android:maxLength="14"
+                            android:text="Soyadı"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtTelefon"
+                            android:layout_width="90.0dip"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="10.0dip"
+                            android:text="Telefon"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lwTelefon"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
